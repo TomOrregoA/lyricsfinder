@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+:is(*, *:before, *:after) {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    background-color: rgb(67, 63, 82);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+#header {
+    background-color: rgb(51, 47, 65);
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    margin-right: 5px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-basis: 1;
+}
+
+.btn {
+    color: rgb(67, 63, 82);
+    background-color: aqua;
+}
+
+.btn:hover {
+    color: rgb(67, 63, 82);
+    background-color: rgb(20, 199, 199);
+}
+
+#lyrics {
+    color: white;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+}
+
+li h2 {
+    font-size: 4rem;
+    color: aqua;
+}
+
+li h3 {
+    color: rgb(161, 161, 161);
+}
+
+li p {
+    margin-top: 3rem;
+}
+
+#lyrics-container {
+    background-color: #363247;
+}
+
+.hide {
+    display: none;
+}
+
+#footer {
+    background-color: rgb(51, 47, 65);
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+#footer p {
+    padding: 1rem;
+    margin: 0;
+}

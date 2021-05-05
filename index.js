@@ -1,14 +1,17 @@
 window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("header");
+let header = document.getElementById("header");
+let wraperTop = document.getElementById("wraper-top");
 
-var sticky = header.offsetTop;
+let sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("fixed-top");
+    wraperTop.classList.remove("hide");
   } else {
     header.classList.remove("fixed-top");
+    wraperTop.classList.add("hide");
   }
 }
 
@@ -21,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let cancion = document.querySelector("#cancion").value;
         let errorMsg = "Artista o canción no encontrada";
         url += artista + "/" + cancion;
+        resetInput();
         const api = new XMLHttpRequest();
         api.open('GET', url, true);
         api.send();
@@ -45,4 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function show() {
     let contenedor = document.querySelector("#lyrics-container");
     contenedor.classList.remove("hide");
+}
+
+function resetInput(){
+  document.getElementById('artista').value = '';
+  document.getElementById('cancion').value = '';
 }

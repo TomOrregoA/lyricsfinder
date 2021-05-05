@@ -14,29 +14,24 @@
 
 <body>
     <header>
-        <div class="container-fluid" id="header">
-            <div class="section p-5">
-                <div class="row d-flex justify-content-center">
-                    <h3>Buscador de letras de canciones</h3>
-                </div>
-                <div class="container d-flex justify-content-center p-3">
-                    <div class="row formulario">
-                        <div class="col">
-                            <form action="#" class="formulario">
-                                <input type="text" name="artista" id="artista" placeholder="Artista">
-                                <input type="text" name="cancion" id="cancion" placeholder="Canción">
-                                <button type="button" class="btn" id="enviar">Buscar Letra</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container-fluid p-0" id="header">
+            <nav class="navbar p-2 justify-content-around">
+                <a class="navbar-brand" href="#">
+                    <h3>Lyrics Finder</h3>
+                </a>
+                <form action="#" class="formulario">
+                    <input type="text" name="cancion" id="cancion" placeholder="Song">
+                    <input type="text" name="artista" id="artista" placeholder="Artist">
+
+                    <button type="button" class="btn" id="enviar">Get the Lyrics!</button>
+                </form>
+            </nav>
         </div>
     </header>
 
     <main>
-        <div class="container" id="lyrics-container">
-            <div class="row d-flex justify-content-center p-3 hide">
+        <div class="container hide" id="lyrics-container">
+            <div class="row d-flex justify-content-center p-3">
                 <div class="col col-md-6">
                     <ul id="lyrics"></ul>
                 </div>

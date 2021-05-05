@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LyricsFinder - Tomás Orrego</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,23 +13,28 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid p-0" id="header">
-            <nav class="navbar p-2 justify-content-around">
-                <a class="navbar-brand" href="#">
-                    <h3>Lyrics Finder</h3>
-                </a>
-                <form action="#" class="formulario">
-                    <input type="text" name="cancion" id="cancion" placeholder="Song">
-                    <input type="text" name="artista" id="artista" placeholder="Artist">
-
-                    <button type="button" class="btn" id="enviar">Get the Lyrics!</button>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">
+                <h3>Lyrics Finder</h3>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                data-target="#navb" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navb">
+                <form class="form-inline my-2 my-lg-0 formulario">
+                    <input class="form-control mr-sm-2" type="text" name="cancion" id="cancion" placeholder="Song">
+                    <input class="form-control mr-sm-2" type="text" name="artista" id="artista" placeholder="Artist">
+                    <button type="button" class="btn-grad" id="enviar">Get the Lyrics!</button>
                 </form>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
+    <div class="hide" id="wraper-top"></div>
+
+    <main id="main">
         <div class="container hide" id="lyrics-container">
             <div class="row d-flex justify-content-center p-3">
                 <div class="col col-md-6">
@@ -40,7 +45,9 @@
     </main>
 
     <footer id="footer">
-        <p>@Tomás Orrego</p>
+        <div class="logo-container">
+            <img class="img-fluid" src="src/logo.svg" alt="">
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

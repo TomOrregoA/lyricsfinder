@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
 
+:root {
+    --dark-purple: rgb(66, 57, 78);
+    --darker-purple: rgb(66, 57, 78);
+    --electric-violet: rgba(165, 90, 240, 1);
+    --dark-violet: rgb(37, 16, 58);
+    --turquoise: rgba(37, 208, 199, 1);
+    --dark-turquoise: rgb(31, 185, 178);
+    --electric-violet-2: #b721ff;
+    --turquoise-2: #21d4fd;
+}
+
 :is(*, *:before, *:after) {
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+.hide {
+    display: none;
 }
 
 body {
@@ -10,7 +25,7 @@ body {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
-    background-color: #363247;
+    background-color: var(--dark-violet);
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -20,26 +35,49 @@ h3 {
     color: #ffffff;
 }
 
-.navbar {
-    background: rgb(51, 47, 65);
+#header > .navbar {
+    /*background-image: linear-gradient(67.2deg, var(--turquoise) -7.5%, var(--electric-violet) 62.7%);*/
+    background-image: linear-gradient(-20deg, var(--electric-violet-2) 0%, var(--turquoise-2) 100%);
+    display: flex;
+    margin: auo!important;
+    justify-content: space-around;
 }
 
 .formulario {
-    margin-right: 5px;
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
-    flex-basis: 1;
 }
 
-.btn {
-    color: rgb(67, 63, 82);
-    background-color: aqua;
+.formulario input {
+    color: #acacac;
 }
 
-.btn:hover {
-    color: rgb(67, 63, 82);
-    background-color: rgb(20, 199, 199);
+.btn-grad {
+    background-image: linear-gradient(67.2deg, var(--electric-violet) -7.5%, var(--turquoise) 62.7%);
+}
+
+.btn-grad {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+#wraper-top {
+    height: 67.6px;
+    top: 0;
+    width: 100%;
 }
 
 #lyrics {
@@ -70,13 +108,9 @@ li p {
     padding: 2rem 3rem;
 }
 
-.hide {
-    /*visibility: hidden;*/
-    display: none;
-}
-
 #footer {
-    background-color: rgb(51, 47, 65);
+    /* background-image: linear-gradient(67.2deg, var(--turquoise) -7.5%, var(--electric-violet) 62.7%); */
+    background-image: linear-gradient(-20deg, var(--electric-violet-2) 0%, var(--turquoise-2) 100%);
     width: 100%;
     color: white;
     text-align: center;
@@ -85,4 +119,13 @@ li p {
 #footer p {
     padding: 1rem;
     margin: 0;
+}
+
+.logo-container {
+    padding: 1rem;
+}
+
+.logo-container > img {
+    width: 50px;
+    height: auto;
 }

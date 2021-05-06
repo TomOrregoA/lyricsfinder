@@ -13,7 +13,6 @@
 
 :is(*, *:before, *:after) {
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 .hide {
@@ -35,6 +34,12 @@ h3 {
     color: #ffffff;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 #header > .navbar {
     /*background-image: linear-gradient(67.2deg, var(--turquoise) -7.5%, var(--electric-violet) 62.7%);*/
     background-image: linear-gradient(-20deg, var(--electric-violet-2) 0%, var(--turquoise-2) 100%);
@@ -45,7 +50,7 @@ h3 {
 
 .formulario {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .formulario input {
@@ -72,12 +77,6 @@ h3 {
     /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
-}
-
-#wraper-top {
-    height: 67.6px;
-    top: 0;
-    width: 100%;
 }
 
 #lyrics {
